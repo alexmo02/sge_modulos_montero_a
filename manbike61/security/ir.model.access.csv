@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_manbike61_manbike61,manbike61.manbike61,model_manbike61_manbike61,base.group_user,1,1,1,1
