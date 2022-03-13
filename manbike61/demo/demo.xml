@@ -1,5 +1,92 @@
 <odoo>
     <data>
+          <record id="trader_11111111A" model="manbike61.trader">
+            <field name="name">Comercial 1</field>
+            <field name="phone">666777888</field>
+            <field name="dni">11111111A</field>
+          </record>
+
+          <record id="trader_22222222B" model="manbike61.trader">
+            <field name="name">Comercial 2</field>
+            <field name="phone">666777888</field>
+            <field name="dni">22222222B</field>
+          </record>
+
+          <record id="manufacturer_1" model="manbike61.manufacturer">
+            <field name="name">Fabricante 1</field>
+            <field name="web">www.fabricante1.com</field>
+            <field name="trader" eval="[(6,0,[ref('trader_11111111A'),ref('trader_22222222B')])]"></field>
+          </record>
+
+          <record id="manufacturer_2" model="manbike61.manufacturer">
+            <field name="name">Fabricante 2</field>
+            <field name="web">www.fabricante2.com</field>
+            <field name="trader" eval="[(6,0,[ref('trader_11111111A'),ref('trader_22222222B')])]"></field>
+          </record>
+
+          <record id="manufacturer_3" model="manbike61.manufacturer">
+            <field name="name">Fabricante 3</field>
+            <field name="web">www.fabricante3.com</field>
+            <field name="trader" eval="[(6,0,[ref('trader_11111111A'),ref('trader_22222222B')])]"></field>
+          </record>
+
+          <record id="delivery_seur" model="manbike61.delivery">
+            <field name="name">SEUR</field>
+            <field name="price">40</field>
+            <field name="shipment_days">3</field>
+          </record>
+
+          <record id="bicycle_1" model="manbike61.bicycle">
+            <field name="name">Bicicleta 1</field>
+            <field name="description">Montaña</field>
+            <field name="price">150</field>
+            <field name="year">2022</field>
+            <field name="chainring">1</field>
+            <field name="cassette">2</field>
+            <field name="wheel">tipo26</field>
+            <field name="manufacturer" ref="manufacturer_1"></field>
+            <field name="trader" eval="[(6,0,[ref('trader_11111111A'),ref('trader_22222222B')])]"></field>
+            <field name="delivery" ref="delivery_seur"></field>
+          </record>
+
+          <record id="bicycle_2" model="manbike61.bicycle">
+            <field name="name">Bicicleta 2</field>
+            <field name="description">Carretera</field>
+            <field name="price">150</field>
+            <field name="year">2022</field>
+            <field name="chainring">1</field>
+            <field name="cassette">2</field>
+            <field name="wheel">tipo26</field>
+            <field name="manufacturer" ref="manufacturer_1"></field>
+            <field name="trader" eval="[(6,0,[ref('trader_11111111A'),ref('trader_22222222B')])]"></field>
+            <field name="delivery" ref="delivery_seur"></field>
+          </record>
+
+          <record id="bicycle_3" model="manbike61.bicycle">
+            <field name="name">Bicicleta 3</field>
+            <field name="description">Carretera</field>
+            <field name="price">150</field>
+            <field name="year">2022</field>
+            <field name="chainring">1</field>
+            <field name="cassette">2</field>
+            <field name="wheel">tipo26</field>
+            <field name="manufacturer" ref="manufacturer_1"></field>
+            <field name="trader" eval="[(6,0,[ref('trader_11111111A'),ref('trader_22222222B')])]"></field>
+            <field name="delivery" ref="delivery_seur"></field>
+          </record>
+
+          <record id="bicycle_4" model="manbike61.bicycle">
+            <field name="name">Bicicleta 4</field>
+            <field name="description">Montaña</field>
+            <field name="price">150</field>
+            <field name="year">2022</field>
+            <field name="chainring">1</field>
+            <field name="cassette">2</field>
+            <field name="wheel">tipo26</field>
+            <field name="manufacturer" ref="manufacturer_1"></field>
+            <field name="trader" eval="[(6,0,[ref('trader_11111111A'),ref('trader_22222222B')])]"></field>
+            <field name="delivery" ref="delivery_seur"></field>
+          </record>
 <!--
           <record id="object0" model="manbike61.manbike61">
             <field name="name">Object 0</field>

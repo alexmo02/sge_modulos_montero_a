@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="delivery_seur" model="manbike61.delivery">
+            <field name="name">SEUR</field>
+            <field name="price">19.99</field>
+            <field name="shipment_days">2</field>
+        </record>
+         <record id="delivery_mrw" model="manbike61.delivery">
+            <field name="name">MRW</field>
+            <field name="price">9.99</field>
+            <field name="shipment_days">5</field>
+        </record>
+    </data>
+    
+</odoo>

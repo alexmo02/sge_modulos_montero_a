@@ -1,0 +1,23 @@
+<odoo>
+    <record id="manbike61.bicycle_report_html" model="ir.actions.report">
+        <field name="name">manbike61.bicycle report_html</field>
+        <field name="model">manbike61.bicycle</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">manbike61.bicycle_report_html_view_qweb</field>
+        <field name="report_file">manbike61.bicycle report_html</field>
+        <field name="binding_model_id" ref="model_manbike61_bicycle"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="manbike61.bicycle_report_pdf" model="ir.actions.report">
+        <field name="name">manbike61.bicycle report_pdf</field>
+        <field name="model">manbike61.bicycle</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">manbike61.bicycle_report_pdf_view_qweb</field>
+        <field name="report_file">manbike61.bicycle report_pdf</field>
+        <field name="print_report_name">'%s' %(object.name) </field>
+        <field name="binding_model_id" ref="model_manbike61_bicycle"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

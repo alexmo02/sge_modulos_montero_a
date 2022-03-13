@@ -1,0 +1,52 @@
+<odoo>
+    <template id="bicycle_report_pdf_view_qweb">
+        <t t-call="web.html_container">
+            <div style="text-align:center">
+                <h2>Informe PDF</h2>
+            </div>
+            <t t-foreach="docs" t-as="bike">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="container">
+                            <div class="">
+                                <h3>Modelo: <span t-field="bike.name"/></h3>
+                                <hr/>                                
+                            </div>
+                            <div class="row"> 
+                                <div class="col-xs-6">
+                                    <p>Fabricante: <span t-field="bike.manufacturer"/> (<span t-field="bike.manufacturer.web"/>)</p>
+                                    <p>Año: <span t-field="bike.year"/></p>
+                                </div>
+                                <div class="col-xs-6">
+                                    <img t-att-src="'data:image/png;base64,%s' % to_text(bike.photo)"/> 
+                                </div>
+                            </div>
+                            <div class="">
+                                <p>Comerciales:</p>
+                                <table class="table table-striped" t-if="bike.trader ">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Teléfono</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="bike.trader " t-as="trade">
+                                            <tr>
+                                                <td><span t-field="trade.name"></span></td>
+                                                <td><span t-field="trade.phone"></span></td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                                <div t-else="">
+                                    <ul><li><span>Sin comerciales</span></li></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

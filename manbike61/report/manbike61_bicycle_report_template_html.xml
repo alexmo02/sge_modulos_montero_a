@@ -1,0 +1,67 @@
+<odoo>
+    <!--<template id="bicycle_report_html_view_qweb">--> <!-- MUY IMPORTANTE: sin indicar componente -->
+    <!--    <t t-call="web.html_container">
+            <div style="text-align:center; color:blue">
+                <h2>Informe Web</h2>
+            </div>
+            <t t-foreach="docs" t-as="bike">
+                <h3>Modelo: <span t-field="bike.name"/></h3>
+                <hr/>
+                <p t-if="bike.manufacturer">Fabricante: <span t-field="bike.manufacturer"/></p>
+                <p>Año: <span t-field="bike.year"/></p>
+                <div>
+                    <img t-att-src="'data:image/png;base64,%s' % to_text(bike.photo)"/>
+                </div>
+                <p>Comerciales:</p>
+                <div t-if="bike.trader">
+                    <ul>                     
+                        <t t-foreach="bike.trader" t-as="trade">
+                            <li><span t-field="trade.name"></span> (<span t-field="trade.phone"></span>)</li>
+                        </t>
+                    </ul>
+                </div>
+                <div t-else="">
+                    <ul><li><span>Sin comerciales</span></li></ul>
+                </div>
+            </t>
+        </t>
+    </template>-->
+
+    <template id="bicycle_report_html_view_qweb"> <!-- MUY IMPORTANTE: sin indicar componente -->
+        <t t-call="web.html_container">
+            <div style="text-align:center; color:blue">
+                <h2>Informe Web</h2>
+            </div>
+            <t t-foreach="docs" t-as="bike">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img t-att-src="'data:image/png;base64,%s' % to_text(bike.photo)"/> 
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Modelo: <span t-field="bike.name"/></h5>
+                                <div class="card-text"> 
+                                    <p t-if="bike.manufacturer">Fabricante: <span t-field="bike.manufacturer"/></p>
+                                    <p>Año: <span t-field="bike.year"/></p>
+                                    <p>Comerciales:</p>
+                                    <div t-if="bike.trader">
+                                        <ul>                     
+                                            <t t-foreach="bike.trader" t-as="trade">
+                                                <li><span t-field="trade.name"></span> (<span t-field="trade.phone"></span>)</li>
+                                            </t>
+                                        </ul>
+                                    </div>
+                                    <div t-else="">
+                                        <ul><li><span>Sin comerciales</span></li></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
+   
